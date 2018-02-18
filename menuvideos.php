@@ -37,7 +37,7 @@
             <div class="opcion-oficio">
                 <div class="imagencont">
                     <center>
-                        <a href=""><img src="" class="img-circular"></a>
+                        <a href=""><img id="carwash" src="img/carwash.png" class="img-circular"></a>
                     </center>
                 </div>
                 <center>
@@ -80,7 +80,7 @@
             <div class="opcion-oficio">
                 <div class="imagencont">
                     <center>
-                        <a href=""><img src="" class="img-circular"></a>
+                        <a href=""><img src="img/bolero.png" class="img-circular"></a>
                     </center>
                 </div>
                 <center>
