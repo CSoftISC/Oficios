@@ -1,9 +1,9 @@
-html {
+body {
 	background: linear-gradient(to right,#209cff,#68e0cf);	
 	height: 100%;
 }
 table {
-	margin-top: 10%;
+	
 	width: 100%;
 }
 img {
@@ -14,9 +14,23 @@ td {
 	width: 30%;
 	text-align: center;
 }
+h4{
+	font-family: 'BioRhyme', serif;
+}
 #jan {
 	text-align: right;
 }
+
+#oficio {
+	font-family: 'BioRhyme', serif;
+	font-size: 50px;
+}
+#titulo {
+	font-family: 'BioRhyme', serif;
+	font-size: 50px;
+	margin-bottom: 50px;
+}
+
 .buttons {
 	padding-top: 5%;
 	text-align: left;
@@ -26,5 +40,32 @@ td {
 	width: 20%;
 	height: auto;
 	padding-bottom: 20%;
+}
+div.container {
+	margin-top: 8%;
+}
+
+.imagencont {
+	border-radius: 50%;
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+}
+.img-circular {
+	padding: 5px;
+	height: 200px;
+	width: auto;
+}
+.opcion-oficio {
+	float: left;
+	margin-left: 50px;
+	margin-bottom: 50px;
+	height: 200px;
+	width: 200px;
+
+}
+.fila {
+	display: inline-block;
+
 }
 
