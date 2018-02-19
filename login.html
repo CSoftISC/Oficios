@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Iniciar sesion</title>
+  <link type="text/css" rel="stylesheet" href="css/style_login.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+</head>
+<body>
+  <script >
+    
+    $('.message a').click(function(){
+      alert("Sandia");
+   $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+});
+  </script>
+<div class="login-page">
+  <div class="form">
+    <form class="register-form">
+      <input type="text" placeholder="Mi nombre es..."/>
+      <input type="text" placeholder="Mi usuario es..."/>
+      <button>Crear usuario</button>
+      <p class="message">Ya tienes cuenta? <a href="#">Iniciar sesion</a></p>
+    </form>
+    <form class="login-form" action="menuvideos.php">
+      <input type="text" placeholder="Mi nombre es..."/>
+
+      <button>Iniciar sesion</button>
+      <p class="message">No estas registrado? <a href="#">Crear cuenta</a></p>
+    </form>
+  </div>
+</div>
+</body>
+</html>
