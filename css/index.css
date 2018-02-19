@@ -1,0 +1,24 @@
+html, body{
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+.main {
+	height: 100%;
+}
+img {
+	margin-top: 20%;
+	width: 30%;
+	height: auto;
+}
+.main {
+	font-size: 2rem;
+}
+.videos {
+
+	background-color: #209cff;
+}
+.juegos {
+
+	background-color: #68e0cf;
+}
