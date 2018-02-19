@@ -17,7 +17,7 @@
             <div class="opcion-oficio">
                 <div class="imagencont">
                     <center>
-                        <a href=""><img src="img/janitor.png" class="img-circular"></a>
+                        <a href="video.php?img=janitor.png"><img src="img/janitor.png" class="img-circular"></a>
                     </center>
                 </div>
                 <center>
@@ -27,7 +27,7 @@
             <div class="opcion-oficio">
                 <div class="imagencont">
                     <center>
-                        <a href=""><img src="img/carpinter.png" class="img-circular"></a>
+                        <a href="video.php?img=carpinter.png"><img src="img/carpinter.png" class="img-circular"></a>
                     </center>
                 </div>
                 <center>
@@ -37,7 +37,7 @@
             <div class="opcion-oficio">
                 <div class="imagencont">
                     <center>
-                        <a href=""><img id="carwash" src="img/carwash.png" class="img-circular"></a>
+                        <a href="video.php?img=carwash.png"><img id="carwash" src="img/carwash.png" class="img-circular"></a>
                     </center>
                 </div>
                 <center>
@@ -47,7 +47,7 @@
             <div class="opcion-oficio">
                 <div class="imagencont">
                     <center>
-                        <a href=""><img src="img/cocinero.png" class="img-circular" href="https://www.freepik.com/free-vector/set-of-smiling-cook-in-different-postures_1134640.htm"></a>
+                        <a href="video.php?img=cocinero.png"><img src="img/cocinero.png" class="img-circular" href="https://www.freepik.com/free-vector/set-of-smiling-cook-in-different-postures_1134640.htm"></a>
                     </center>
                 </div>
                 <center>
@@ -60,7 +60,7 @@
             <div class="opcion-oficio">
                 <div class="imagencont">
                     <center>
-                        <a href=""><img src="img/jardinero.png" class="img-circular" href="https://www.freepik.com/free-vector/gardener_797079.htm"></a>
+                        <a href="video.php?img=jardinero.png"><img src="img/jardinero.png" class="img-circular" href="https://www.freepik.com/free-vector/gardener_797079.htm"></a>
                     </center>
                 </div>
                 <center>
@@ -70,7 +70,7 @@
             <div class="opcion-oficio">
                 <div class="imagencont">
                     <center>
-                        <a href=""><img  src="img/bombero.png" class="img-circular" href="https://www.freepik.com/free-vector/set-vector-icons-of-small-children-different-professions_1215574.htm"></a>
+                        <a href="video.php?img=bombero.png"><img  src="img/bombero.png" class="img-circular" href="https://www.freepik.com/free-vector/set-vector-icons-of-small-children-different-professions_1215574.htm"></a>
                     </center>
                 </div>
                 <center>
@@ -80,7 +80,7 @@
             <div class="opcion-oficio">
                 <div class="imagencont">
                     <center>
-                        <a href=""><img src="img/bolero.png" class="img-circular"></a>
+                        <a href="video.php?img=bolero.png"><img src="img/bolero.png" class="img-circular"></a>
                     </center>
                 </div>
                 <center>

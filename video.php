@@ -1,8 +1,26 @@
+<?php 
+$img= $_GET['img'];
+if($img=='janitor.png'){
+	$title="Conserje";
+}elseif($img=='carpinter.png'){
+	$title="Carpintero";
+}elseif($img=='carwash.png'){
+	$title="Carpintero";
+}elseif($img=='cocinero.png'){
+	$title="Cocinero";
+}elseif($img=='jardinero.png'){
+	$title="Jardinero";
+}elseif($img=='bombero.png'){
+	$title="Bombero";
+}elseif($img=='bolero.png'){
+	$title="Bolero";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Conserje</title>
+	<title><?php echo $title ?></title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css">
 </head>
@@ -11,7 +29,7 @@
 		<table>
 			<tbody>
 				<td id="jan">
-					<img src="img/janitor.png" href="https://www.freepik.com/free-photos-vectors/truck">
+					<img src="img/<?php echo $img ?>" href="https://www.freepik.com/free-photos-vectors/truck">
 				</td>
 				<td>
 					<video controls> 
