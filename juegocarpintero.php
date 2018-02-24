@@ -16,7 +16,8 @@
             <td class="Tools">
     <div style="position:absolute; left:250px; top:30px; width:10px; height:10px "> <img style=" width:120px; height:100px " src="img/casco.png "></div>
 
-     <div style="position:absolute; left:1px; top:130px; width:10px; height:10px "> <img style=" width:150px; height:150px " src="img/herramienta.png "></div>
+     <div style="position:absolute; left:-5px; top:130px; width:10px; height:10px "> <img style=" width:150px; height:150px " src="img/herramienta.png "></div>
+     <div style="position:absolute; left:110px; top:130px; width:10px; height:10px "> <img style=" width:150px; height:150px " src="img/martillo.png "></div>
 
        <div style="position:absolute; left:50px; top:26px; width:5px; height:5px "> <img style=" width:120px; height:120px " src="img/cinta.png "></div>
 
