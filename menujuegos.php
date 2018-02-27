@@ -17,7 +17,7 @@
             <div class="opcion-oficio">
                 <div class="imagencont">
                     <center>
-                        <a href="juegoconserje.php"><img src="img/janitor.png" class="img-circular"></a>
+                        <a href="juegoconserje.html"><img src="img/janitor.png" class="img-circular"></a>
                     </center>
                 </div>
                 <center>
@@ -27,7 +27,7 @@
             <div class="opcion-oficio">
                 <div class="imagencont">
                     <center>
-                        <a href="juegocarpintero.php"><img src="img/carpinter.png" class="img-circular"></a>
+                        <a href="juegocarpintero.html"><img src="img/carpinter.png" class="img-circular"></a>
                     </center>
                 </div>
                 <center>
@@ -37,7 +37,7 @@
             <div class="opcion-oficio">
                 <div class="imagencont">
                     <center>
-                        <a href=""><img id="carwash" src="img/carwash.png" class="img-circular"></a>
+                        <a href="juegolavacarros.html"><img id="carwash" src="img/carwash.png" class="img-circular"></a>
                     </center>
                 </div>
                 <center>
@@ -47,7 +47,7 @@
             <div class="opcion-oficio">
                 <div class="imagencont">
                     <center>
-                        <a href=""><img src="img/cocinero.png" class="img-circular" href="https://www.freepik.com/free-vector/set-of-smiling-cook-in-different-postures_1134640.htm"></a>
+                        <a href="juegococinero.html"><img src="img/cocinero.png" class="img-circular" href="https://www.freepik.com/free-vector/set-of-smiling-cook-in-different-postures_1134640.htm"></a>
                     </center>
                 </div>
                 <center>
