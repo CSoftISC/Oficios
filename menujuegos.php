@@ -60,7 +60,7 @@
             <div class="opcion-oficio">
                 <div class="imagencont">
                     <center>
-                        <a href=""><img src="img/jardinero.png" class="img-circular" href="https://www.freepik.com/free-vector/gardener_797079.htm"></a>
+                        <a href="juegojardinero.html"><img src="img/jardinero.png" class="img-circular" href="https://www.freepik.com/free-vector/gardener_797079.htm"></a>
                     </center>
                 </div>
                 <center>
@@ -70,7 +70,7 @@
             <div class="opcion-oficio">
                 <div class="imagencont">
                     <center>
-                        <a href=""><img  src="img/bombero.png" class="img-circular" href="https://www.freepik.com/free-vector/set-vector-icons-of-small-children-different-professions_1215574.htm"></a>
+                        <a href="juegobombero.html"><img  src="img/bombero.png" class="img-circular" href="https://www.freepik.com/free-vector/set-vector-icons-of-small-children-different-professions_1215574.htm"></a>
                     </center>
                 </div>
                 <center>
@@ -80,7 +80,7 @@
             <div class="opcion-oficio">
                 <div class="imagencont">
                     <center>
-                        <a href=""><img src="img/bolero.png" class="img-circular"></a>
+                        <a href="juegobolero.html"><img src="img/bolero.png" class="img-circular"></a>
                     </center>
                 </div>
                 <center>
