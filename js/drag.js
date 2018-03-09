@@ -35,14 +35,9 @@ function regresarPosOriginal(elemento) {
 function inContainer(elemento) {
   var contenedor = $("#contenedor");
   var cont_w = contenedor.width();
-  var cont_h = contenedor.height();
-  var cont_t = contenedor.position().top;
-  var cont_l = contenedor.position().left;
-  
   var elemLeft = elemento.offset().left + elemento.width()/2;
-  var elemTop = elemento.offset().top+elemento.height()/2;
 
-  return (elemLeft > cont_l && elemLeft < cont_l+cont_w  && elemTop > cont_t && elemTop < cont_t+cont_h);
+  return (elemLeft > cont_l);
   
 }
 
