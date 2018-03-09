@@ -42,11 +42,27 @@ function inContainer(elemento) {
 }
 
 function mostrarError() {
-  //TODO: hacer esta funcion lel
+  var text = $("<p>").html("<b>Intentemos de nuevo!</b>");
+  var contenedor = $("#contenedor")
+  console.log(text.width())
+  mitadWidth = $("body").width() / 2 - 200 ;
+  text.css({"position":"absolute", "top":"50px", "left": mitadWidth+"px", "font-size": "50px", "color": "red","font-family": "BioRhyme, serif", "text-shadow": "-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black"})
+  $("body").append(text);
+  setTimeout(function(){
+    text.remove();
+  },500)
   console.log("error")
 }
 
 function mostrarAcierto() {
-    //TODO: hacer esta funcion lel
-    console.log("acierto")
+  var text = $("<p>").html("<b>Muy bien!</b>")
+  var contenedor = $("#contenedor")
+  console.log(text.width())
+  mitadWidth = $("body").width() / 2 - 70 ;
+  text.css({"position":"absolute", "top":"50px", "left": mitadWidth+"px", "font-size": "50px", "color": "yellow","font-family": "BioRhyme, serif", "text-shadow": "-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black"})
+  $("body").append(text);
+  setTimeout(function(){
+    text.remove();
+  },500)
+  console.log("acierto")
 }
