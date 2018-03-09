@@ -34,7 +34,7 @@ function regresarPosOriginal(elemento) {
 
 function inContainer(elemento) {
   var contenedor = $("#contenedor");
-  var cont_w = contenedor.width();
+  var cont_l = contenedor.position().left;
   var elemLeft = elemento.offset().left + elemento.width()/2;
 
   return (elemLeft > cont_l);
