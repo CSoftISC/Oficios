@@ -1,5 +1,5 @@
 body {
-	background: linear-gradient(to right,#209cff,#68e0cf);	
+	 background: linear-gradient( green, #82fc67, #fff600);	
 	height: 100%;
 }
 table {
@@ -15,7 +15,7 @@ td {
 	text-align: center;
 }
 h4{
-	font-family: 'BioRhyme', serif;
+font-family: 'Indie Flower', cursive;
 }
 #jan {
 	text-align: right;
@@ -24,10 +24,11 @@ h4{
 #oficio {
 	font-family: 'BioRhyme', serif;
 	font-size: 50px;
+	font-family: 'Indie Flower', cursive;
 }
 #titulo {
-	font-family: 'BioRhyme', serif;
-	font-size: 50px;
+		font-family: 'Indie Flower', cursive;
+	font-size: 70px;
 	margin-bottom: 50px;
 }
 

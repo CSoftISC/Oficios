@@ -12,13 +12,16 @@ img {
 	height: auto;
 }
 .main {
-	font-size: 2rem;
+	font-size: 5rem;
+font-family: 'Indie Flower', cursive;
+
+
 }
 .videos {
+ background: linear-gradient(red, yellow);
 
-	background-color: #209cff;
 }
 .juegos {
 
-	background-color: #68e0cf;
+	   background: linear-gradient( yellow, green);
 }
