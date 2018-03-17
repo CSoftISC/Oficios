@@ -1,3 +1,19 @@
+<?php
+include "conexion.php";
+if(isset($_POST['username'])){
+	$nombre = $_POST['username']; 
+	$query = "Select id, nombre, ap_materno, ap_paterno from Usuarios where nombre = '$nombre'";
+	$result = $conn->query($query);
+	if($row=$result->fetch_assoc()) {
+		session_start();
+		$_SESSION['id'];
+		$_SESSION['nombre'];
+		$_SESSION['ap_materno'];
+		$_SESSION['ap_paterno'];
+		echo '<meta http-equiv="refresh" content="0; url=menu.php"/>';
+	}
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,13 +67,13 @@
     <div class="right">
       <div class="content">
         <h2>Bienvenido!</h2>
-        <form method="post" >
+		<form method="post" action="">
           <div class="form-group">
             <label for="username" class="form-label">Usuario:</label>
-            <input type="text" />
+            <input name="username" type="text" />
           </div>
           <button id="goRight"  class="off" onclick="return false;" >Agregarme</button>
-          	<button id="login" type="submit" formaction="menu.php" >Entrar</button>
+          	<button id="login" type="submit" >Entrar</button>
           </form>
           
       
