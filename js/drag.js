@@ -13,26 +13,48 @@ $(document).ready(function(){
 });
 
 function stopDrag(event, ui) {
-  if (inContainer(ui.helper)) {
-	intentos++;
-    if (!ui.helper.attr("dropLeft")) {
-      	mostrarError();
-      	regresarPosOriginal(ui.helper);
-    } else {
-		aciertos++;
-    	mostrarAcierto()
-    	var left = ui.helper.attr("dropLeft");
-    	var top = ui.helper.attr("dropTop");
-    	ui.helper.animate({ "top": top, "left": left });
-		ui.helper.draggable('disable');
-	}
-  } else {
-    regresarPosOriginal(ui.helper)
-  }
-  if(intentos == 7) {
- 	console.log("game over"); 
-  }
+	if (inContainer(ui.helper)) {
+  	  intentos++;
+  	  if (!ui.helper.attr("dropLeft")) {
+  	    	mostrarError();
+  	    	regresarPosOriginal(ui.helper);
+  	  } else {
+  	  	aciertos++;
+  	  	mostrarAcierto()
+  	  	var left = ui.helper.attr("dropLeft");
+  	  	var top = ui.helper.attr("dropTop");
+  	  	ui.helper.animate({ "top": top, "left": left });
+  	  	ui.helper.draggable('disable');
+  	  }
+  	} else {
+  		regresarPosOriginal(ui.helper)
+  	}
+  	if(intentos == 7) {
+		juegoterminado();
+  	}
   
+}
+
+function juegoterminado(){
+    		var form = document.createElement("form");
+            form.setAttribute("method", "post");
+            form.setAttribute("action", "juegoterminado.php");
+	
+            var hiddenField = document.createElement("input");
+            hiddenField.setAttribute("type", "hidden");
+            hiddenField.setAttribute("name", "cal");
+            hiddenField.setAttribute("value", aciertos);
+            form.appendChild(hiddenField);
+
+            var hiddenField = document.createElement("input");
+            hiddenField.setAttribute("type", "hidden");
+            hiddenField.setAttribute("name", "oficio");
+            hiddenField.setAttribute("value", idoficio);
+            form.appendChild(hiddenField);
+
+            document.body.appendChild(form);
+            form.submit();
+
 }
 
 function regresarPosOriginal(elemento) {
