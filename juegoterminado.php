@@ -1,4 +1,5 @@
 <?php 
+session_start();
 include 'conexion.php';
 $cal = $_POST['cal'];
 $oficio = $_POST['oficio'];
@@ -6,9 +7,8 @@ $id = $_SESSION['id'];
 $nombre = $_SESSION['nombre'];
 $ap_materno = $_SESSION['ap_materno'];
 $ap_paterno = $_SESSION['ap_paterno'];
-$query = "insert into Calificaciones(id, aciertos, fecha, id_usuario, id_oficios) values($nombre, $cal, $id, $oficio);"
+$query = "insert into Calificaciones(aciertos, fecha, id_usuario, id_oficios) values($cal, now(),$id, $oficio);";
 $resultado = $conn->query($query);
-echo $resultado;
 ?>
 <!DOCTYPE html>
 <html lang="en">

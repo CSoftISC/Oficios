@@ -36,24 +36,27 @@ function stopDrag(event, ui) {
 }
 
 function juegoterminado(){
-    		var form = document.createElement("form");
-            form.setAttribute("method", "post");
-            form.setAttribute("action", "juegoterminado.php");
-	
-            var hiddenField = document.createElement("input");
-            hiddenField.setAttribute("type", "hidden");
-            hiddenField.setAttribute("name", "cal");
-            hiddenField.setAttribute("value", aciertos);
-            form.appendChild(hiddenField);
+    var idoficio = $("#id-oficio").attr("value");
+    var form = document.createElement("form");
+    form.setAttribute("method", "post");
+    form.setAttribute("action", "juegoterminado.php");
 
-            var hiddenField = document.createElement("input");
-            hiddenField.setAttribute("type", "hidden");
-            hiddenField.setAttribute("name", "oficio");
-            hiddenField.setAttribute("value", idoficio);
-            form.appendChild(hiddenField);
+    var cal = aciertos*100/7;
+    cal = Math.round(cal);
+    var hiddenField = document.createElement("input");
+    hiddenField.setAttribute("type", "hidden");
+    hiddenField.setAttribute("name", "cal");
+    hiddenField.setAttribute("value", cal);
+    form.appendChild(hiddenField);
 
-            document.body.appendChild(form);
-            form.submit();
+    var hiddenField = document.createElement("input");
+    hiddenField.setAttribute("type", "hidden");
+    hiddenField.setAttribute("name", "oficio");
+    hiddenField.setAttribute("value", idoficio);
+    form.appendChild(hiddenField);
+
+    document.body.appendChild(form);
+    form.submit();
 
 }
 

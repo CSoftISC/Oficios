@@ -6,10 +6,10 @@ if(isset($_POST['username'])){
 	$result = $conn->query($query);
 	if($row=$result->fetch_assoc()) {
 		session_start();
-		$_SESSION['id'];
-		$_SESSION['nombre'];
-		$_SESSION['ap_materno'];
-		$_SESSION['ap_paterno'];
+		$_SESSION['id'] = $row['id'];
+		$_SESSION['nombre']= $row['nombre'];
+		$_SESSION['ap_materno'] = $row['ap_materno'];
+		$_SESSION['ap_paterno'] = $row['ap_paterno'];
 		echo '<meta http-equiv="refresh" content="0; url=menu.php"/>';
 	}
 }
