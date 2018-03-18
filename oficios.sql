@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 17, 2018 at 05:24 AM
+-- Generation Time: Mar 18, 2018 at 09:55 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -22,6 +22,16 @@ SET time_zone = "+00:00";
 -- Database: `oficios`
 --
 
+DELIMITER $$
+--
+-- Procedures
+--
+CREATE DEFINER=`root`@`localhost` PROCEDURE `promedios` ()  BEGIN
+select id_usuario, sum(aciertos)/count(id_usuario) promedio from Calificaciones GROUP by id_usuario order by id_usuario;
+END$$
+
+DELIMITER ;
+
 -- --------------------------------------------------------
 
 --
@@ -36,6 +46,24 @@ CREATE TABLE `Calificaciones` (
   `id_oficios` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `Calificaciones`
+--
+
+INSERT INTO `Calificaciones` (`id`, `aciertos`, `fecha`, `id_usuario`, `id_oficios`) VALUES
+(1, 86, '2018-03-17', 1, 1),
+(2, 86, '2018-03-17', 1, 3),
+(3, 71, '2018-03-17', 1, 4),
+(4, 86, '2018-03-18', 5, 1),
+(5, 86, '2018-03-18', 5, 3),
+(6, 86, '2018-03-18', 5, 6),
+(7, 100, '2018-03-18', 5, 5),
+(8, 57, '2018-03-18', 4, 7),
+(9, 71, '2018-03-18', 4, 2),
+(10, 71, '2018-03-18', 4, 4),
+(11, 43, '2018-03-18', 2, 6),
+(12, 86, '2018-03-18', 2, 7);
+
 -- --------------------------------------------------------
 
 --
@@ -46,6 +74,19 @@ CREATE TABLE `Oficios` (
   `id` int(11) NOT NULL,
   `nombre` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `Oficios`
+--
+
+INSERT INTO `Oficios` (`id`, `nombre`) VALUES
+(1, 'Conserje'),
+(2, 'Bolero'),
+(3, 'Carpintero'),
+(4, 'Cocinero'),
+(5, 'Jardinero'),
+(6, 'Lava Carros'),
+(7, 'Bombero');
 
 -- --------------------------------------------------------
 
@@ -66,7 +107,11 @@ CREATE TABLE `Usuarios` (
 --
 
 INSERT INTO `Usuarios` (`id`, `nombre`, `ap_materno`, `ap_paterno`, `promedio`) VALUES
-(1, 'cosme', 'escobedo', 'sanchez', 0);
+(1, 'cosme', 'escobedo', 'sanchez', 0),
+(2, 'yadira', 'pena', 'ramirez', NULL),
+(3, 'carlos', 'silverira', 'hinojos', NULL),
+(4, 'paul', 'estala', 'enriquez', NULL),
+(5, 'damian ', 'escobedo', 'sanchez', NULL);
 
 --
 -- Indexes for dumped tables
@@ -100,19 +145,19 @@ ALTER TABLE `Usuarios`
 -- AUTO_INCREMENT for table `Calificaciones`
 --
 ALTER TABLE `Calificaciones`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `Oficios`
 --
 ALTER TABLE `Oficios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `Usuarios`
 --
 ALTER TABLE `Usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables
