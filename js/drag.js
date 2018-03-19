@@ -55,6 +55,11 @@ function juegoterminado(){
     hiddenField.setAttribute("value", idoficio);
     form.appendChild(hiddenField);
 
+    var hiddenField = document.createElement("input");
+    hiddenField.setAttribute("type", "hidden");
+    hiddenField.setAttribute("name", "url");
+    hiddenField.setAttribute("value", window.location.href);
+    form.appendChild(hiddenField);
     document.body.appendChild(form);
     form.submit();
 

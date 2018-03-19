@@ -27,7 +27,7 @@ font-family: 'Indie Flower', cursive;
 	font-family: 'Indie Flower', cursive;
 }
 #titulo {
-		font-family: 'Indie Flower', cursive;
+	font-family: 'Indie Flower', cursive;
 	font-size: 70px;
 	margin-bottom: 50px;
 }
@@ -73,4 +73,22 @@ div.container {
 	width: 80%;
 	height: auto;
 	padding-top: 20%;
+}
+.calificacion {
+	font-family: 'Indie Flower', cursive;
+	font-size: 50px;
+}
+.boton {
+	background-color: red;
+	font-size: 30px;
+	color: yellow;
+	text-shadow: -1px 0 black, 0 1px black, 0 1px black, 0 1px black ;
+	border-color:black;
+	border: 2px;	
+	border-radius: 5%;
+	padding: 5px;
+	font-family: 'Indie Flower', cursive;
+} 
+.boton:hover {
+	text-decoration:none;
 }
