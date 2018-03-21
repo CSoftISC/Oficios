@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 18, 2018 at 09:55 PM
+-- Generation Time: Mar 21, 2018 at 02:16 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -26,6 +26,10 @@ DELIMITER $$
 --
 -- Procedures
 --
+CREATE DEFINER=`root`@`localhost` PROCEDURE `promedioPorOficio` ()  BEGIN
+	select u.id usuarioId, u.nombre usuarioNombre, sum(aciertos)/count(aciertos)  promedio, o.id oficioId, o.nombre oficioNombre from Usuarios u, Calificaciones c, Oficios o where u.id = c.id_usuario and o.id = c.id_oficios GROUP by c.id_oficios, u.id;
+END$$
+
 CREATE DEFINER=`root`@`localhost` PROCEDURE `promedios` ()  BEGIN
 select id_usuario, sum(aciertos)/count(id_usuario) promedio from Calificaciones GROUP by id_usuario order by id_usuario;
 END$$
@@ -62,7 +66,41 @@ INSERT INTO `Calificaciones` (`id`, `aciertos`, `fecha`, `id_usuario`, `id_ofici
 (9, 71, '2018-03-18', 4, 2),
 (10, 71, '2018-03-18', 4, 4),
 (11, 43, '2018-03-18', 2, 6),
-(12, 86, '2018-03-18', 2, 7);
+(12, 86, '2018-03-18', 2, 7),
+(13, 100, '2018-03-19', 1, 1),
+(14, 100, '2018-03-19', 1, 1),
+(15, 100, '2018-03-19', 1, 1),
+(16, 100, '2018-03-19', 1, 1),
+(17, 100, '2018-03-19', 1, 1),
+(18, 57, '2018-03-19', 1, 6),
+(19, 57, '2018-03-19', 1, 6),
+(20, 57, '2018-03-19', 1, 6),
+(21, 57, '2018-03-19', 1, 6),
+(22, 57, '2018-03-19', 1, 6),
+(23, 71, '2018-03-19', 1, 2),
+(24, 71, '2018-03-19', 1, 2),
+(25, 71, '2018-03-19', 1, 2),
+(26, 71, '2018-03-19', 1, 2),
+(27, 71, '2018-03-19', 1, 2),
+(28, 71, '2018-03-19', 1, 2),
+(29, 71, '2018-03-19', 1, 2),
+(30, 71, '2018-03-19', 1, 2),
+(31, 71, '2018-03-19', 1, 2),
+(32, 71, '2018-03-19', 1, 2),
+(33, 71, '2018-03-19', 1, 2),
+(34, 71, '2018-03-19', 1, 2),
+(35, 71, '2018-03-19', 1, 2),
+(36, 71, '2018-03-19', 1, 2),
+(37, 71, '2018-03-19', 1, 2),
+(38, 71, '2018-03-19', 1, 2),
+(39, 71, '2018-03-19', 1, 2),
+(40, 71, '2018-03-19', 1, 2),
+(41, 71, '2018-03-19', 1, 2),
+(42, 71, '2018-03-19', 1, 2),
+(43, 86, '2018-03-19', 1, 5),
+(44, 100, '2018-03-19', 1, 7),
+(45, 100, '2018-03-19', 1, 7),
+(46, 100, '2018-03-19', 1, 7);
 
 -- --------------------------------------------------------
 
@@ -145,7 +183,7 @@ ALTER TABLE `Usuarios`
 -- AUTO_INCREMENT for table `Calificaciones`
 --
 ALTER TABLE `Calificaciones`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT for table `Oficios`
