@@ -1,6 +1,7 @@
 body {
-	 background: linear-gradient( green, #82fc67, #fff600);	
-	height: 100%;
+	 background-image:url("bka.png");	
+	 height: auto;
+	 width: auto;
 }
 table {
 	margin-top: 9%;
