@@ -2,6 +2,7 @@ body {
 	 background-image:url("bka.png");	
 	 height: auto;
 	 width: auto;
+	 background-size: cover;
 }
 table {
 	margin-top: 9%;
