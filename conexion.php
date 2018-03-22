@@ -1,6 +1,6 @@
 <?php 
     $user="root";
-    $pass="cosmeomar";
+    $pass="";
     $url="localhost";
     $db="oficios";
    
