@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 21, 2018 at 02:16 AM
+-- Generation Time: Mar 22, 2018 at 07:58 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -100,7 +100,9 @@ INSERT INTO `Calificaciones` (`id`, `aciertos`, `fecha`, `id_usuario`, `id_ofici
 (43, 86, '2018-03-19', 1, 5),
 (44, 100, '2018-03-19', 1, 7),
 (45, 100, '2018-03-19', 1, 7),
-(46, 100, '2018-03-19', 1, 7);
+(46, 100, '2018-03-19', 1, 7),
+(47, 71, '2018-03-22', 3, 4),
+(48, 86, '2018-03-22', 3, 4);
 
 -- --------------------------------------------------------
 
@@ -183,7 +185,7 @@ ALTER TABLE `Usuarios`
 -- AUTO_INCREMENT for table `Calificaciones`
 --
 ALTER TABLE `Calificaciones`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT for table `Oficios`
