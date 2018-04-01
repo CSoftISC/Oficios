@@ -3,6 +3,7 @@ body {
 	 height: auto;
 	 width: auto;
 	 background-size: cover;
+	  margin: 0;
 }
 table {
 	margin-top: 9%;
