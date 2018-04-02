@@ -7,8 +7,38 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+
+                <style type="text/css">
+            
+            #box-loader{
+                position: fixed;
+                background:rgba(0,0,0 ,0.733);
+                opacity: 1;
+                top: 0px;
+                width: 100%;
+                height: 100vh;
+                z-index: 1000;
+
+            }
+
+            #loader{
+                position: relative; 
+                top: 50%; 
+                left: 47%; 
+                font-size: 5rem; 
+                color: #fff;
+            }
+
+        </style>
     
 <body>
+
+       <div id="box-loader">
+            <i id="loader" class="fa fa-spinner fa-spin" ></i>
+         </div>
+
     <div class="container-fluid">
         <center>
         <h1 id='titulo'>¿Qué Quiero Jugar?</h1>
@@ -91,5 +121,19 @@
 
     </div>
 
+
+     
+
+           <script src="js/jquery-3.3.1.min.js"></script>
+
+
+    <script type="text/javascript">
+        window.addEventListener("load", function(){
+            //var loader = document.getElemtnBydId('loader');
+
+            $('#box-loader').fadeOut();
+
+        });
+    </script>
 </body>
 </html>

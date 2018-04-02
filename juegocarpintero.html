@@ -2,16 +2,42 @@
 <html>
     <head>
         
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
         
         <link rel="stylesheet" href="css/style.css">
         <script src="js/jquery-3.3.1.min.js"></script>
-        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script> 
         <script src="./js/drag.js"></script>
+
+        <style type="text/css">
+            
+            #box-loader{
+                position: fixed;
+                background:rgba(0,0,0 ,0.733);
+                opacity: 1;
+                top: 0px;
+                width: 100%;
+                height: 100vh;
+                z-index: 1000;
+
+            }
+
+            #loader{
+                position: relative; 
+                top: 50%; 
+                left: 47%; 
+                font-size: 5rem; 
+                color: #fff;
+            }
+
+        </style>
     </head>
     
     <h1 align="center" style="position: absolute; left: 500px; top: -55px; width:120px; height:100px; font-size:80px"> Carpintero </h1>
     
     <body style="height: 100%; width: 100%;">
+
+
         <div style="background-image: url('./img/BK.png'); background-size: cover;height: 610px; width: 400px; "></div>
         
          <!--Things-->
@@ -55,5 +81,21 @@
 <a href=""><img src="img/signo.png" alt="Circle with a plus sign in the middle." style="width: 100px; height: 120px "></a>
 				
 <input id="id-oficio" value="3" type="hidden">
+
+
+
+    <div id="box-loader">
+    <i id="loader" class="fa fa-spinner fa-spin" ></i>
+        
+    </div>
+
+    <script type="text/javascript">
+        window.addEventListener("load", function(){
+            //var loader = document.getElemtnBydId('loader');
+
+            $('#box-loader').fadeOut();
+
+        });
+    </script>
 </body>
 </html>
