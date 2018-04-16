@@ -26,6 +26,7 @@ body {
   background: #2C3034 url(../img/bg_index1.jpg);
   background-size: cover;
   background-position: 50% 50%;
+  
 }
 
 #back {
@@ -106,6 +107,17 @@ button {
 button:hover {
   background: #0288D1;
   box-shadow: 0 4px 7px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
+  .fade-out {
+  -webkit-transition:opacity .5s ease-out;
+  -moz-transition:opacity .5s ease-out;
+  -ms-transition:opacity .5s ease-out;
+  -o-transition:opacity .5s ease-out;
+  transition:opacity .5s ease-out;
+}
+
+.fade-out:hover {
+  opacity:0.2;
+}
 }
 .off {
   background: none;

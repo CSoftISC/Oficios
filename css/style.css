@@ -53,12 +53,17 @@ div.container {
 	border-radius: 50%;
 	height: 100%;
 	width: 100%;
-	background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+	border-color: black;
+	border-width: 15px;
+	border-style: double;
 }
 .img-circular {
 	padding: 5px;
 	height: 200px;
 	width: auto;
+}
+.img-circular:hover{
+  transform: scale(1.5);
 }
 .opcion-oficio {
 	float: left;
@@ -94,4 +99,11 @@ div.container {
 } 
 .boton:hover {
 	text-decoration:none;
+}
+.a:hover{
+
+	 transform: scale(1.5);
+}
+.img-circular:hover{
+transform: scale(1.5);
 }

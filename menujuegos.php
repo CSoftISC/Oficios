@@ -44,9 +44,14 @@
         <h1 id='titulo'>¿Qué Quiero Jugar?</h1>
         <div class="fila">
             <div class="opcion-oficio">
-                <div class="imagencont">
+                <div class="imagencont" style="background-color:#2346c4"; >
                     <center>
-                        <a href="juegoconserje.html"><img src="img/janitor.png" class="img-circular"></a>
+
+                        <a href="juegoconserje.html"><img src="img/janitor.png" class="img-circular">
+
+
+                        </a>
+
                     </center>
                 </div>
                 <center>
@@ -54,7 +59,7 @@
                 </center>
             </div>
             <div class="opcion-oficio">
-                <div class="imagencont">
+                <div class="imagencont" style="background-color: #a15000;">
                     <center>
                         <a href="juegocarpintero.html"><img  src="img/carpinter.png" class="img-circular"></a>
                     </center>
@@ -64,7 +69,7 @@
                 </center>
             </div>
             <div class="opcion-oficio">
-                <div class="imagencont">
+                <div class="imagencont" style="background-color:#e9ff00";>
                     <center>
                         <a href="juegolavacarros.html"><img id="carwash" src="img/carwash.png" class="img-circular"></a>
                     </center>
@@ -74,7 +79,7 @@
                 </center>
             </div>
             <div class="opcion-oficio">
-                <div class="imagencont">
+                <div class="imagencont" style="background-color: #ff0015">
                     <center>
                         <a href="juegococinero.html"><img src="img/cocinero.png" class="img-circular" href="https://www.freepik.com/free-vector/set-of-smiling-cook-in-different-postures_1134640.htm"></a>
                     </center>
@@ -87,9 +92,10 @@
         <br>
         <div class="fila">
             <div class="opcion-oficio">
-                <div class="imagencont">
+                <div class="imagencont" style="background-color:#35ff23">
                     <center>
                         <a href="juegojardinero.html"><img src="img/jardinero.png" class="img-circular" href="https://www.freepik.com/free-vector/gardener_797079.htm"></a>
+                        
                     </center>
                 </div>
                 <center>
@@ -97,7 +103,7 @@
                 </center>
             </div>
             <div class="opcion-oficio">
-                <div class="imagencont">
+                <div class="imagencont" style="background-color: #e55937">
                     <center>
                         <a href="juegobombero.html"><img  src="img/bombero.png" class="img-circular" href="https://www.freepik.com/free-vector/set-vector-icons-of-small-children-different-professions_1215574.htm"></a>
                     </center>
@@ -107,7 +113,7 @@
                 </center>
             </div>
             <div class="opcion-oficio">
-                <div class="imagencont">
+                <div class="imagencont" style="background-color: #6a006a">
                     <center>
                         <a href="juegobolero.html"><img src="img/bolero.png" class="img-circular"></a>
                     </center>
@@ -118,11 +124,7 @@
             </div>
         </div>
         </center>
-
-    </div>
-
-
-     
+ 
 
            <script src="js/jquery-3.3.1.min.js"></script>
 

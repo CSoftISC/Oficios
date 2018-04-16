@@ -30,7 +30,7 @@ $resultado = $conn->query($query);
 		<h1 id="titulo">Bien hecho</h1>
 		<h2 class="calificacion">Obtuviste <?php echo $cal; ?></h2>
 		<div>
-		<a class="boton" href="<?php echo $url;?>">Jugar de Nuevo</a>
+		<a class="boton" style=shrink hover> href="<?php echo $url;?>">Jugar de Nuevo</a>
 		<a class="boton" href="menujuegos.php">Ver Otros Juegos</a>
 		</div>
 		</center>

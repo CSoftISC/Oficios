@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="css/flexboxgrid.min.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/index.css">
+	 <link rel="stylesheet" href="css/style.css">
 
 	        <style type="text/css">
             
@@ -32,10 +33,15 @@
 
 </head>
 <body>
+
+
 	<div class="main row center-lg center-md center-sm center-xs">
 		<div class="videos col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<center>
-                <a href="menuvideos.php"><img src="img/video-player.png" class="img-circular"></a>
+                <a href="menuvideos.php"><img src="img/video-player.png"  class="img-circular">
+
+
+                </a>
             	<h4>Videos</h4>
             </center>
 		</div>
