@@ -65,7 +65,7 @@ if(isset($_POST['username'])){
       </div>
     </div>
     <div class="right">
-      <div class="content">
+      <div class="content" style="position: relative; left: 250px; top: 150px;">
         <h2>Bienvenido!</h2>
 		<form method="post" action="">
           <div class="form-group">

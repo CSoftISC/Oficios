@@ -7,12 +7,39 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="./js/drag.js"></script>
+         <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"  crossorigin="anonymous"></script>
+      <style type="text/css">
+            
+            #box-loader{
+                position: fixed;
+                background:rgba(0,0,0 ,0.733);
+                opacity: 1;
+                top: 0px;
+                width: 100%;
+                height: 100vh;
+                z-index: 1000;
+
+            }
+
+            #loader{
+                position: relative; 
+                top: 50%; 
+                left: 47%; 
+                font-size: 5rem; 
+                color: #fff;
+            }
+
+        </style>
    </head>
 
 
     		 
 
 <body class="Body-Games" style="height: 100%; width: 100%;">
+      <div id="box-loader">
+    <i id="loader" class="fa fa-spinner fa-spin" style="position: absolute; top: 50%; left: 47%; font-size: 5rem; color: #fff;"></i>
+    
+  </div>
     <h1 align="center" style="position: absolute; left: 450px; top: -55px; font-size:80px"> Lava Carros </h1>
 	</td> 
             <td class="background">
@@ -46,11 +73,15 @@
 				</td>
 
 
+<input id="id-oficio" value="7" type="hidden">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script type="text/javascript">
+    window.addEventListener("load", function(){
+      //var loader = document.getElemtnBydId('loader');
 
+      $('#box-loader').fadeOut(5000);
 
-    
-    </div>
-
-	<input id="id-oficio" value="6" type="hidden">
+    });
+  </script>
 </body>
 </html>

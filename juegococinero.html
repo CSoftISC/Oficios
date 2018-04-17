@@ -6,11 +6,38 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="./js/drag.js"></script>
+       <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"  crossorigin="anonymous"></script>
+      <style type="text/css">
+            
+            #box-loader{
+                position: fixed;
+                background:rgba(0,0,0 ,0.733);
+                opacity: 1;
+                top: 0px;
+                width: 100%;
+                height: 100vh;
+                z-index: 1000;
+
+            }
+
+            #loader{
+                position: relative; 
+                top: 50%; 
+                left: 47%; 
+                font-size: 5rem; 
+                color: #fff;
+            }
+
+        </style>
    </head>
 
 </body>
 <h1 align="center" style="position: absolute; left: 450px; top: -55px; width:200px; height:300px; font-size:80px"> Cocinero </h1>
 <body class="Body-Games" style="height: 100%; width: 100%;">
+     <div id="box-loader">
+    <i id="loader" class="fa fa-spinner fa-spin" style="position: absolute; top: 50%; left: 47%; font-size: 5rem; color: #fff;"></i>
+    
+  </div>
 	<!-- fonfito -->
             	 <div id="contenedor" style="position:absolute; left:500px; top:30px"> <img style=" width:800px; height:600px " src="img/bkr.png "></div>
             	 <div style="position:absolute; left:20px; top:400px; width:10px; height:10px "> <img style=" width:450px; height:200px " src="img/estante.png "></div>
@@ -36,9 +63,15 @@
 					<br>
 					<a href=""><img src="img/exit.png" alt="Circle with an arrow in the middle." style="width: 100px; height: 100px "></a>
 					<a href=""><img src="img/signo.png" alt="Circle with a plus sign in the middle." style="width: 110px; height: 100px "></a>
-				    
-    </div>
-    <input id="id-oficio" value="4" type="hidden">
+<input id="id-oficio" value="7" type="hidden">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script type="text/javascript">
+    window.addEventListener("load", function(){
+      //var loader = document.getElemtnBydId('loader');
 
+      $('#box-loader').fadeOut(5000);
+
+    });
+  </script>
 </body>
 </html>
