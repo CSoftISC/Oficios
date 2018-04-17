@@ -1,5 +1,26 @@
 body {
-	 background-image:url("bka.png");	
+	 background-image:url("blue.png");	
+	 height: auto;
+	 width: auto;
+	 background-size: cover;
+	  margin: 0;
+}
+.Body-Games{
+	background-image: url(bka.png);
+	 height: auto;
+	 width: auto;
+	 background-size: cover;
+	  margin: 0;
+}
+.Body-Videos{
+	background-image: url(bk-mv.png);
+	 height: auto;
+	 width: auto;
+	 background-size: cover;
+	  margin: 0;
+}
+.Body-V{
+	background-image: url(bk-mv.png);
 	 height: auto;
 	 width: auto;
 	 background-size: cover;
@@ -18,16 +39,16 @@ td {
 	text-align: center;
 }
 h4{
-font-family: 'Indie Flower', cursive;
+font-family: 'Comic Sans MS', cursive;
 }
 #jan {
 	text-align: right;
 }
 
 #oficio {
-	font-family: 'BioRhyme', serif;
+	font-family: 'Comic Sans MS', serif;
 	font-size: 50px;
-	font-family: 'Indie Flower', cursive;
+	font-family: 'Comic Sans MS', cursive;
 }
 #titulo {
 	font-family: 'Indie Flower', cursive;

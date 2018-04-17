@@ -4,13 +4,15 @@
     <title>Que quiero ver?</title>
     <meta charset="UTF-8">
     <title>Conserje</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css"; style="background-color: #0000ff;">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">-->
+<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"  crossorigin="anonymous"></script>
 
-                <style type="text/css">
+
+     <style type="text/css">
             
             #box-loader{
                 position: fixed;
@@ -55,7 +57,8 @@
                     </center>
                 </div>
                 <center>
-                    <h4><b>Conserje</b></h4>
+                    <h4><b>Conserje</b>
+                    </h4>
                 </center>
             </div>
             <div class="opcion-oficio">
@@ -133,7 +136,7 @@
         window.addEventListener("load", function(){
             //var loader = document.getElemtnBydId('loader');
 
-            $('#box-loader').fadeOut();
+            $('#box-loader').fadeOut(5000);
 
         });
     </script>

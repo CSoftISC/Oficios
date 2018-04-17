@@ -18,10 +18,10 @@ font-family: 'Indie Flower', cursive;
 
 }
 .videos {
- background: linear-gradient(red, yellow);
+ background: linear-gradient(yellow, red);
 
 }
 .juegos {
 
-	   background: linear-gradient( yellow, green);
-}
+	   background: linear-gradient( green, yellow);
+	}

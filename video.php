@@ -24,7 +24,7 @@ if($img=='janitor.png'){
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css">
 </head>
-<body>
+<body class="Body-V"> 
 	<center>
 		<table>
 			<tbody>
@@ -37,9 +37,8 @@ if($img=='janitor.png'){
 					</video>
 				</td>
 				<td class="buttons">
-					<a href=""><img src="img/replay.png" alt="Circle with X in the middle."></a>
-					<br>
-					<a href=""><img src="img/exit.png" alt="Circle with an arrow in the middle."></a>
+<a href=""><img src="img/exit.png" alt="Circle with an arrow in the middle." style="width: 100px; height: 100px "></a>
+<a href=""><img src="img/replay.png" alt="Circle with a plus sign in the middle." style="width: 110px; height: 100px "></a>
 				</td>
 			</tbody>
 		</table>
