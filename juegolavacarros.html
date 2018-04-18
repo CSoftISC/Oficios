@@ -7,16 +7,43 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="./js/drag.js"></script>
+         <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"  crossorigin="anonymous"></script>
+      <style type="text/css">
+            
+            #box-loader{
+                position: fixed;
+                background:rgba(0,0,0 ,0.733);
+                opacity: 1;
+                top: 0px;
+                width: 100%;
+                height: 100vh;
+                z-index: 1000;
+
+            }
+
+            #loader{
+                position: relative; 
+                top: 50%; 
+                left: 47%; 
+                font-size: 5rem; 
+                color: #fff;
+            }
+
+        </style>
    </head>
 
 
     		 
 
-<body style="height: 100%; width: 100%;">
+<body class="Body-Games" style="height: 100%; width: 100%;">
+      <div id="box-loader">
+    <i id="loader" class="fa fa-spinner fa-spin" style="position: absolute; top: 50%; left: 47%; font-size: 5rem; color: #fff;"></i>
+    
+  </div>
     <h1 align="center" style="position: absolute; left: 450px; top: -55px; font-size:80px"> Lava Carros </h1>
 	</td> 
             <td class="background">
-            	 <div style="position:absolute; left:50px; top:150px; width:10px; height:10px "> <img style=" width:350px; height:430px " src="img/st.png "></div>
+            	 <div style="position:absolute; left:50px; top:150px; width:10px; height:10px "> <img style=" width:350px; height:430px " src="img/st3.png "></div>
             	  <div id="contenedor" style="position:absolute; left:550px; top:20px;"> <img style=" width:800px; height:600px " src="img/casa.png "></div>
             	  <div style="position:absolute; left:1000px; top:430px; width:10px; height:10px "> <img style=" width:300px; height:200px " src="img/carwash.png "></div>
             	 
@@ -42,15 +69,19 @@
 					<a href=""> <div style="position: absolute; left: 1230px; top: 10px; width: 5px; height: 5px "> <img src="img/replay.png" alt="Circle with X in the middle." style="width: 100px; height: 100px "></a>
 					<br>
 					<a href=""><img src="img/exit.png" alt="Circle with an arrow in the middle." style="width: 100px; height: 100px "></a>
-					<a href=""><img src="img/signo.png" alt="Circle with a plus sign in the middle." style="width: 100px; height: 120px "></a>
+					<a href=""><img src="img/signo.png" alt="Circle with a plus sign in the middle." style="width: 110px; height: 100px "></a>
 				</td>
 
 
+<input id="id-oficio" value="7" type="hidden">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script type="text/javascript">
+    window.addEventListener("load", function(){
+      //var loader = document.getElemtnBydId('loader');
 
+      $('#box-loader').fadeOut(5000);
 
-    
-    </div>
-
-	<input id="id-oficio" value="6" type="hidden">
+    });
+  </script>
 </body>
 </html>

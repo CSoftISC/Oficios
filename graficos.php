@@ -1,4 +1,5 @@
 <?php 
+
 require "conexion.php";
 $query = "Select id, nombre from Oficios";  
 $oficiosquery = $conn->query($query);
@@ -18,11 +19,14 @@ while($alumno=$alumnosresult->fetch_assoc()){
 <html>
 
 <head>
+
 	<script src="js/plotly.min.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
 </head>
 <body>
+ 
+
 <center>
 <div id="promedioAlumno" style="width:800px;height:650px;"></div>
 <div id="promedioOficio" style="width:800px;height:650px;"></div>

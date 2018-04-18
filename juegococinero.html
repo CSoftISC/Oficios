@@ -6,27 +6,54 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="./js/drag.js"></script>
+       <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"  crossorigin="anonymous"></script>
+      <style type="text/css">
+            
+            #box-loader{
+                position: fixed;
+                background:rgba(0,0,0 ,0.733);
+                opacity: 1;
+                top: 0px;
+                width: 100%;
+                height: 100vh;
+                z-index: 1000;
+
+            }
+
+            #loader{
+                position: relative; 
+                top: 50%; 
+                left: 47%; 
+                font-size: 5rem; 
+                color: #fff;
+            }
+
+        </style>
    </head>
 
 </body>
 <h1 align="center" style="position: absolute; left: 450px; top: -55px; width:200px; height:300px; font-size:80px"> Cocinero </h1>
-<body style="height: 100%; width: 100%;">
+<body class="Body-Games" style="height: 100%; width: 100%;">
+     <div id="box-loader">
+    <i id="loader" class="fa fa-spinner fa-spin" style="position: absolute; top: 50%; left: 47%; font-size: 5rem; color: #fff;"></i>
+    
+  </div>
 	<!-- fonfito -->
-            	 <div id="contenedor" style="position:absolute; left:500px; top:30px"> <img style=" width:700px; height:600px " src="img/bkr.png "></div>
+            	 <div id="contenedor" style="position:absolute; left:500px; top:30px"> <img style=" width:800px; height:600px " src="img/bkr.png "></div>
             	 <div style="position:absolute; left:20px; top:400px; width:10px; height:10px "> <img style=" width:450px; height:200px " src="img/estante.png "></div>
             	 <div style="position:absolute; left:50px; top:100px; width:10px; height:10px "> <img style=" width:350px; height:80px " src="img/gancho.png "></div>
     <!-- herramientas --> 
                 <div style="position:absolute; left:45px; top:140px; width:10px; height:10px "> <img class="draggable" style=" width:70px; height:180px " src="img/coloritos.png "></div>
                 <div style="position:absolute; left:110px; top:150px; width:10px; height:10px "> <img class="draggable" style=" width:100px; height:120px " dropLeft="706px" dropTop="42px" src="img/guantess.png "></div>  
-                <div style="position:absolute; left:180px; top:140px; width:10px; height:10px "> <img class="draggable" style=" width:90px; height:250px " dropLeft="620px" dropTop="198px" src="img/mandil.png "></div>      	
-                <div style="position:absolute; left:235px; top:145px; width:10px; height:10px "> <img class="draggable" style=" width:90px; height:200px " dropLeft="642px" dropTop="9px" src="img/tabla.png "></div>
-                <div style="position:absolute; left:340px; top:140px; width:10px; height:10px "> <img class="draggable" style=" width:90px; height:150px " dropLeft="369px" dropTop="38px" src="img/cucharas.png "></div>
+                <div style="position:absolute; left:180px; top:140px; width:10px; height:10px "> <img class="draggable" style=" width:90px; height:250px " dropLeft="640px" dropTop="198px" src="img/mandil.png "></div>      	
+                <div style="position:absolute; left:235px; top:145px; width:10px; height:10px "> <img class="draggable" style=" width:90px; height:200px " dropLeft="628px" dropTop="6px" src="img/tabla.png "></div>
+                <div style="position:absolute; left:340px; top:140px; width:10px; height:10px "> <img class="draggable" style=" width:90px; height:150px " dropLeft="385px" dropTop="30px" src="img/cucharas.png "></div>
                 <div style="position:absolute; left:45px; top:350px; width:10px; height:10px "> <img class="draggable" style=" width:90px; height:90px " dropLeft="471px" dropTop="-88px" src="img/gorro.png "></div>
 
-                <div style="position:absolute; left:320px; top:350px; width:10px; height:10px "> <img class="draggable" style=" width:180px; height: 100px " dropLeft="372px" dropTop="39px" src="img/sarten.png "></div>
+                <div style="position:absolute; left:320px; top:350px; width:10px; height:10px "> <img class="draggable" style=" width:180px; height: 100px " dropLeft="380px" dropTop="39px" src="img/sarten.png "></div>
 
                 <div style="position:absolute; left:45px; top:480px; width:10px; height:10px "> <img class="draggable" style=" width:110px; height:90px " src="img/mangera.png "></div>
-                <div style="position:absolute; left:150px; top:450px; width:10px; height:10px "> <img class="draggable" style=" width:90px; height:120px " dropLeft="463px" dropTop="-90px" src="img/cuchillos.png "></div>
+                <div style="position:absolute; left:150px; top:450px; width:10px; height:10px "> <img class="draggable" style=" width:90px; height:120px " dropLeft="470px" dropTop="-90px" src="img/cuchillos.png "></div>
 
                 <div style="position:absolute; left:230px; top:450px; width:10px; height:10px "> <img class="draggable" style=" width:100px; height:100px " src="img/herramienta.png "></div>
 
@@ -35,10 +62,16 @@
 					<a href=""> <div style="position: absolute; left: 1230px; top: 10px; width: 5px; height: 5px "> <img src="img/replay.png" alt="Circle with X in the middle." style="width: 100px; height: 100px "></a>
 					<br>
 					<a href=""><img src="img/exit.png" alt="Circle with an arrow in the middle." style="width: 100px; height: 100px "></a>
-					<a href=""><img src="img/signo.png" alt="Circle with a plus sign in the middle." style="width: 100px; height: 120px "></a>
-				    
-    </div>
-    <input id="id-oficio" value="4" type="hidden">
+					<a href=""><img src="img/signo.png" alt="Circle with a plus sign in the middle." style="width: 110px; height: 100px "></a>
+<input id="id-oficio" value="7" type="hidden">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script type="text/javascript">
+    window.addEventListener("load", function(){
+      //var loader = document.getElemtnBydId('loader');
 
+      $('#box-loader').fadeOut(5000);
+
+    });
+  </script>
 </body>
 </html>

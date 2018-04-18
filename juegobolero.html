@@ -8,14 +8,41 @@
     <script src="js/jquery-ui.min.js"></script>
     <script src="./js/drag.js"></script>
  </head>
+   <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"  crossorigin="anonymous"></script>
+      <style type="text/css">
+            
+            #box-loader{
+                position: fixed;
+                background:rgba(0,0,0 ,0.733);
+                opacity: 1;
+                top: 0px;
+                width: 100%;
+                height: 100vh;
+                z-index: 1000;
+
+            }
+
+            #loader{
+                position: relative; 
+                top: 50%; 
+                left: 47%; 
+                font-size: 5rem; 
+                color: #fff;
+            }
+
+        </style>
 
 <h1 align="center" style="position: absolute; left: 500px; top: -55px; width:120px; height:100px; font-size:80px"> Bolero </h1>
 
-<body style="height: 100%; width: 100%;">
-	<div id="contenedor" style="position:absolute; left:450px; top:70px;"><img style=" width:850px; height:600px" src="img/bkbolero.png "></div>
-	<div style="position: absolute;left: 50px; top:40px;"><img style="width: 400px; height: 550px" src="img/fondito.png"></div>
+<body class="Body-Games" style="height: 100%; width: 100%;">
+	 <div id="box-loader">
+    <i id="loader" class="fa fa-spinner fa-spin" style="position: absolute; top: 50%; left: 47%; font-size: 5rem; color: #fff;"></i>
+    
+  </div>
+	<div id="contenedor" style="position:absolute; left:450px; top:80px;"><img style=" width:850px; height:600px" src="img/bkbolero.png "></div>
+	<div style="position: absolute;left: 50px; top:80px;"><img style="width: 400px; height: 550px" src="img/fondito.png"></div>
 <!--herramientas-->	
-<div style="position: absolute; left: 200px; top: 50px;" class="draggable"><img style="width: 140px; height: 120px" src="img/botiquin.png"></div>
+<div style="position: absolute; left: 200px; top: 80px;" class="draggable"><img style="width: 140px; height: 120px" src="img/botiquin.png"></div>
 <div style="position:absolute; left:80px; top:230px;" class="draggable"> <img style=" width:130px; height:130px " src="img/cinta.png "></div>
 <div style="position:absolute; left:280px; top:300px;" class="draggable"> <img style=" width:130px; height:130px " src="img/regla.png "></div>
 <div style="position:absolute; left:100px; top:80px;" class="draggable" dropLeft="668px" dropTop="441px"> <img style=" width:100px; height:100px " src="img/tinta.png "></div>
@@ -35,8 +62,17 @@
 <a href=""> <div style="position: absolute; left: 1230px; top: 10px; width: 5px; height: 5px "> <img src="img/replay.png" alt="Circle with X in the middle." style="width: 100px; height: 100px "></a>
 <br>
 <a href=""><img src="img/exit.png" alt="Circle with an arrow in the middle." style="width: 100px; height: 100px "></a>
-<a href=""><img src="img/signo.png" alt="Circle with a plus sign in the middle." style="width: 100px; height: 120px "></a>
+<a href=""><img src="img/signo.png" alt="Circle with a plus sign in the middle." style="width: 110px; height: 100px "></a>
 				
-<input id="id-oficio" value="2" type="hidden">
+<<input id="id-oficio" value="7" type="hidden">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script type="text/javascript">
+    window.addEventListener("load", function(){
+      //var loader = document.getElemtnBydId('loader');
+
+      $('#box-loader').fadeOut(5000);
+
+    });
+  </script>
 </body>
-</html>	
+</html>
