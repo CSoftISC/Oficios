@@ -1,5 +1,13 @@
 <?php
 include "conexion.php";
+if(isset($_POST['nombre'])){
+    $nombre = $_POST['nombre'];
+    $ap_paterno = $_POST['ap_paterno'];
+    $ap_materno = $_POST['ap_materno'];
+    $query = "insert into Usuarios(nombre, ap_materno, ap_paterno) values ('$nombre', '$ap_materno', '$ap_paterno');";
+    $result = $conn->query($query);
+    $_POST['username'] = $nombre;
+}
 if(isset($_POST['username'])){
 	$nombre = $_POST['username']; 
 	$query = "Select id, nombre, ap_materno, ap_paterno from Usuarios where nombre = '$nombre'";
@@ -7,7 +15,7 @@ if(isset($_POST['username'])){
 	if($row=$result->fetch_assoc()) {
 		session_start();
 		$_SESSION['id'] = $row['id'];
-		$_SESSION['nombre']= $row['nombre'];
+		$_SESSION['nombre'] = $row['nombre'];
 		$_SESSION['ap_materno'] = $row['ap_materno'];
 		$_SESSION['ap_paterno'] = $row['ap_paterno'];
 		echo '<meta http-equiv="refresh" content="0; url=menu.php"/>';
@@ -52,16 +60,16 @@ if(isset($_POST['username'])){
     <div class="left">
       <div class="content">
         <h2>Agregarme</h2>
-        <form method="post" onsubmit="return false;">
+        <form method="post" action="">
           <div class="form-group">
-            <input type="text" placeholder="Mi nombre es..." />
+            <input type="text" name="nombre" placeholder="Mi nombre es..." />
+            <input type="text" name="ap_paterno" placeholder="Mi primer apellido es..." />
+            <input type="text" name="ap_materno" placeholder="Mi segundo apellido es..." />
+            <input type="text" name="edad" placeholder="Mi edad es..." />
           </div>
-          <div class="form-group"></div>
-          <div class="form-group"></div>
-          <div class="form-group"></div>
+          <button id="goLeft" class="off">Cancelar</button>
+          <button type="submit">Agregame!</button>
         </form>
-        <button id="goLeft" class="off">Cancelar</button>
-        <button>Agregame!</button>
       </div>
     </div>
     <div class="right">
