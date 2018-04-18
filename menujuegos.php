@@ -4,7 +4,7 @@
     <title>Que quiero ver?</title>
     <meta charset="UTF-8">
     <title>Conserje</title>
-    <link rel="stylesheet" href="css/style.css"; style="background-color: #0000ff;">
+    <link rel="stylesheet" href="css/style.css";>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 

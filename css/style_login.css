@@ -10,12 +10,12 @@ body {
 
 
 .backRight {
-  position: fixed;
+  position: absolute;
   right: 0;
-  margin-left: 100%;margin-top:100%
-  width: 100%;
+ 
+  width: 50%;
   height: 100%;
-  background: #3498db url(../img/bg_index2.jpg);
+  background: #00ff00 url(../img/bg_index2.jpg);
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -60,7 +60,7 @@ body {
 .left {
   width: 50%;
   height: 100%;
-  background: #7718a0;
+  background: #00b050;
   left: 0;
   position: absolute;
 }
@@ -82,7 +82,24 @@ body {
   left: 50%;
   margin-left: -125px;
 }
+.content2 {
+  background-color:#00b050;
+  width: 400px;
+  margin: 0 auto;
+  top: 25%;
+  position: absolute;
+  left: 50%;
+  margin-left: -125px;
+  position: relative left: 250px; top: 100px;";
+  font-size: 50px;
+}
 
+.content2 h2 {
+  
+   text-align: left;
+  font-weight: bold;
+  font-size: 80px;
+}
 .content h2 {
   
    text-align: left;
@@ -127,9 +144,9 @@ button:hover {
 }
 .off {
   background: none;
-  color: #000;
+  color: #d6ed40;
   box-shadow: none;
-  border-style: double;
+  
 }
 
 .right .off:hover {
@@ -146,9 +163,18 @@ input {
   background: transparent;
   border: 0;
   outline: 0;
-  border-bottom: 1px solid #45494C;
+  border-bottom: 1px solid #000;
   font-size: 20px;
-  color: #959595;
-  padding: 3px 0;
+  color: #FFF;
+  padding: 0;
   margin-top: 20px;
+  font-size: 25px;
+}
+
+.form-label{
+  font-size: 30px;
+  font-family: arial, calbril;
+}
+.placeholder{
+  font-size: 20px;
 }
