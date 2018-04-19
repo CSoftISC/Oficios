@@ -90,10 +90,10 @@ if(isset($_POST['username'])){
         </h2>
         <form method="post" action="">
           <div class="form-group">
-            <input type="text" name="nombre" placeholder="Mi nombre es..." />
-            <input type="text" name="ap_paterno" placeholder="Mi primer apellido es..." />
-            <input type="text" name="ap_materno" placeholder="Mi segundo apellido es..." />
-            <input type="text" name="edad" placeholder="Mi edad es..." />
+            <input type="text" name="nombre" pattern="[A-Za-z]*" required placeholder="Mi nombre es..." />
+            <input type="text" name="ap_paterno" pattern="[A-Za-z]*" placeholder="Mi primer apellido es..." />
+            <input type="text" name="ap_materno" pattern="[A-Za-z]*" placeholder="Mi segundo apellido es..." />
+            <input type="number" name="edad" pattern="[0-9]" placeholder="Mi edad es..." />
           </div>
           <button id="goLeft" class="off">Cancelar</button>
           <button type="submit">Agregame!</button>
