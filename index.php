@@ -95,7 +95,7 @@ if(isset($_POST['username'])){
             <input type="text" name="ap_materno" pattern="[A-Za-z]*" placeholder="Mi segundo apellido es..." />
             <input type="number" name="edad" pattern="[0-9]" placeholder="Mi edad es..." />
           </div>
-          <button id="goLeft" class="off">Cancelar</button>
+          <button type="reset" id="goLeft" class="off">Cancelar</button>
           <button type="submit">Agregame!</button>
         </form>
       </div>
