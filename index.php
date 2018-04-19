@@ -85,7 +85,7 @@ if(isset($_POST['username'])){
 <div id="slideBox">
   <div class="topLayer">
     <div class="left">
-      <div class="content2",  style="position: relative; left: 250px; top: 150px;">
+      <div class="content2",  style="position: relative; left: 250px; top: 40px;">
         <h2>Agregarme
         </h2>
         <form method="post" action="">
