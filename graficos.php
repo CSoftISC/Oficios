@@ -7,7 +7,7 @@ $oficios = array();
 while($oficio=$oficiosquery->fetch_assoc()){
 	$oficios[] = $oficio;
 }
-$query = "Select id, nombre from Usuarios order by id";
+$query = "Select id, nombre from Usuarios where id in (select id_usuario from Calificaciones) order by id";
 $alumnosresult =$conn->query($query);
 $query = "call promedios()";
 $promedios = $conn->query($query);
@@ -58,7 +58,7 @@ while($alumno=$alumnosresult->fetch_assoc()){
 	}
 	Plotly.newPlot( promedioAlumno, data, layout);
 	var promediosPorOficio = {};
-	var alumnos = [];
+	var alumnos = {};
 
 <?php 
 	$query = "call promedioPorOficio()";
@@ -72,8 +72,8 @@ while($alumno=$alumnosresult->fetch_assoc()){
 	}
 	foreach($alumnos as $alumno){
 		$nombre = $alumno['nombre'];
-		echo "alumnos.push('$nombre');";
 		$id = $alumno['id'];
+		echo "alumnos[$id] = '$nombre';";
 		echo "promediosPorOficio['$id'] = [];";	
 		foreach($oficios as $oficio){
 			$idOficio = $oficio['id'];
@@ -96,12 +96,12 @@ while($alumno=$alumnosresult->fetch_assoc()){
 				?>
 		];
 		data = [];
-		for(var i = 1; i < Object.keys(promediosPorOficio).length + 1; i++){
+        Object.keys(promediosPorOficio).forEach(function(key) {
 				trace = {
 						x: x, 
-						y: promediosPorOficio[i], 
+						y: promediosPorOficio[key], 
 						type: 'lines+markers',
-						name: alumnos[i-1],
+						name: alumnos[key],
 						marker: {
 						  size: 8
 						},
@@ -111,7 +111,7 @@ while($alumno=$alumnosresult->fetch_assoc()){
 
 				}	
 				data.push(trace);
-		}
+		});
 		var layout = {
 			title: "Promedios por oficio"	
 		}
