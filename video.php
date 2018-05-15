@@ -33,7 +33,7 @@ if($img=='janitor.png'){
 				</td>
 				<td>
 					<video controls> 
-						<source src="Mi bebe.mp4" type="video/mp4">
+						<source src="bolero.mp4" type="video/mp4">
 					</video>
 				</td>
 				<td class="buttons">
