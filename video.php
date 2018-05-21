@@ -2,18 +2,25 @@
 $img= $_GET['img'];
 if($img=='janitor.png'){
 	$title="Conserje";
+	$video="conserje.mp4";
 }elseif($img=='carpinter.png'){
 	$title="Carpintero";
+	$video="carpintero.mp4";
 }elseif($img=='carwash.png'){
-	$title="Carpintero";
+	$title="Lava Carros";
+	$video="Lava Carros.mp4";
 }elseif($img=='cocinero.png'){
 	$title="Cocinero";
+	$video="Cocinero.mp4";
 }elseif($img=='jardinero.png'){
 	$title="Jardinero";
+	$video="Jardinero.mp4";
 }elseif($img=='bombero.png'){
 	$title="Bombero";
+	$video="bombero.mp4";
 }elseif($img=='bolero.png'){
 	$title="Bolero";
+	$video="Bolero.mp4";
 }
 ?>
 <!DOCTYPE html>
@@ -33,7 +40,7 @@ if($img=='janitor.png'){
 				</td>
 				<td>
 					<video controls> 
-						<source src="bolero.mp4" type="video/mp4">
+						<source src="videos/<?php echo $video;?>" type="video/mp4">
 					</video>
 				</td>
 				<td class="buttons">
