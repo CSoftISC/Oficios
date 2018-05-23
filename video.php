@@ -44,7 +44,7 @@ if($img=='janitor.png'){
 					</video>
 				</td>
 				<td class="buttons">
-<a href=""><img src="img/exit.png" alt="Circle with an arrow in the middle." style="width: 100px; height: 100px "></a>
+<a href="menuvideos.php"><img src="img/exit.png" alt="Circle with an arrow in the middle." style="width: 100px; height: 100px "></a>
 <a href=""><img src="img/replay.png" alt="Circle with a plus sign in the middle." style="width: 110px; height: 100px "></a>
 				</td>
 			</tbody>
