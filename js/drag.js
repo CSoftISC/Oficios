@@ -99,3 +99,8 @@ function mostrarAcierto() {
     text.remove();
   },500)
 }
+
+function reproducirSonido(sonido){
+  var audio = new Audio(sonido);
+  audio.play();
+}
