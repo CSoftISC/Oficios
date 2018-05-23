@@ -34,6 +34,19 @@
 </body>
 <h1 id=titulo align="center" style="position: absolute; left: 40px; top: -20px;  font-size:40px"> Coloca las Herramientas que Utiliza el Cocinero </h1>
 <body class="Body-Games" style="height: 100%; width: 100%;">
+       <audio id="bienhecho">
+     <source src="audios/ogg/bienhecho.ogg">
+     <source src="audios/mp3/bienhecho.mp3">
+ </audio>
+
+  <audio id="de_new">
+     <source src="audios/ogg/de_new.ogg">
+     <source src="audios/mp3/de_new.mp3">
+ </audio>
+  <audio id="bombero">
+     <source src="audios/ogg/cocinero.ogg">
+     <source src="audios/mp3/cocinero.mp3">
+ </audio>
      <div id="box-loader">
     <i id="loader" class="fa fa-spinner fa-spin" style="position: absolute; top: 50%; left: 47%; font-size: 5rem; color: #fff;"></i>
     
@@ -62,12 +75,12 @@
 					<a href=""> <div style="position: absolute; left: 1230px; top: 10px; width: 5px; height: 5px "> <img src="img/replay.png" alt="Circle with X in the middle." style="width: 100px; height: 100px "></a>
 					<br>
 					<a href="menujuegos.php"><img src="img/exit.png" alt="Circle with an arrow in the middle." style="width: 100px; height: 100px "></a>
-					<a href="javascript:;" onclick="reproducirSonido('audios/cocinero.mp3')"><img src="img/signo.png" alt="Circle with a plus sign in the middle." style="width: 110px; height: 100px "></a>
+					<a href="javascript:;" onclick="reproducirSonido('cocinero')"><img src="img/signo.png" alt="Circle with a plus sign in the middle." style="width: 110px; height: 100px "></a>
 <input id="id-oficio" value="4" type="hidden">
 <script type="text/javascript">
     window.addEventListener("load", function(){
       //var loader = document.getElemtnBydId('loader');
-
+      reproducirSonido('cocinero');
       $('#box-loader').fadeOut(5000);
 
     });

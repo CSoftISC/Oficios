@@ -36,7 +36,10 @@
         </style>
     
 <body>
-
+ <audio id="pip">
+     <source src="audios/menu/ogg/pip.ogg">
+     <source src="audios/menu/mp3/pip.mp3">
+ </audio>
        <div id="box-loader">
             <i id="loader" class="fa fa-spinner fa-spin" ></i>
          </div>
@@ -138,6 +141,10 @@
 
             $('#box-loader').fadeOut(5000);
 
+        });
+        var audio = $("#pip")[0];
+        $(".img-circular").mouseenter(function() {
+        audio.play();
         });
     </script>
 </body>

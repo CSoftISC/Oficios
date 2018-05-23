@@ -35,13 +35,21 @@
 </head>
 
 <body>
+ <audio id="ping">
+     <source src="audios/menu/ogg/ping.ogg">
+     <source src="audios/menu/mp3/ping.mp3">
+ </audio>
+  <audio id="pip">
+     <source src="audios/menu/ogg/pip.ogg">
+     <source src="audios/menu/mp3/pip.mp3">
+ </audio>
 
 
 	<div class="main row center-lg center-md center-sm center-xs">
 		<div class="videos col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<center>
 
-                <a href="menuvideos.php"><img src="img/video-player.png"  class="img-circular">
+                <a href="menuvideos.php"><img src="img/video-player.png" id="videos" class="img-circular">
 
 
                 </a>
@@ -50,7 +58,7 @@
 		</div>
 		<div class="juegos col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<center>
-                <a href="menujuegos.php"><img src="img/console.png" class="img-circular"></a>
+                <a href="menujuegos.php"><img src="img/console.png" id="juegos" class="img-circular"></a>
             	<h4>Juegos</h4>
             </center>
 		</div>
@@ -69,6 +77,14 @@
 
 			$('#box-loader').fadeOut();
 
+		});
+		var audio1 = $("#ping")[0];
+		var audio2 = $("#pip")[0];
+		$("#juegos").mouseenter(function() {
+  		audio1.play();
+		});
+		$("#videos").mouseenter(function() {
+  		audio2.play();
 		});
 	</script>
 

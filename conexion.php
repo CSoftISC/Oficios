@@ -1,6 +1,6 @@
 <?php 
     $user="root";
-    $pass="";
+    $pass="devpass9";
     $url="localhost";
     $db="oficios";
    

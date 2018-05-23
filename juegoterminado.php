@@ -20,11 +20,17 @@ $resultado = $conn->query($query);
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css">
     <link rel="stylesheet" href="css/style.css">
-   
+   	<script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="./js/drag.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
    
 </head>
 <body>
+	  <audio id="lograste">
+     <source src="audios/ogg/lograste.ogg">
+     <source src="audios/mp3/lograste.mp3">
+ </audio>
 	<div class="container-fluid">
 		<center>
 		<h1 id="titulo">Bien hecho</h1>
@@ -35,5 +41,8 @@ $resultado = $conn->query($query);
 		</div>
 		</center>
 	</div>
+	<script type="text/javascript">
+		  reproducirSonido('lograste');
+	</script>
 </body>
 </html>

@@ -42,6 +42,10 @@
 
 </head>
 <body class="Body-Videos">
+    <audio id="pip">
+     <source src="audios/menu/ogg/pip.ogg">
+     <source src="audios/menu/mp3/pip.mp3">
+ </audio>
     <div class="container-fluid">
         <center>
         <h1 id='titulo'>¿Qué quiero ver?</h1>
@@ -132,6 +136,10 @@
 
             $('#box-loader').fadeOut(5000);
 
+        });
+         var audio = $("#pip")[0];
+        $(".img-circular").mouseenter(function() {
+        audio.play();
         });
     </script>
 </body>

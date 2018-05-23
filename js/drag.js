@@ -82,6 +82,7 @@ function mostrarError() {
   var text = $("<p>").html("<b>Intentemos de nuevo!</b>");
   var contenedor = $("#contenedor")
   mitadWidth = $("body").width() / 2 - 200 ;
+  reproducirSonido('de_new');
   text.css({"position":"absolute", "top":"50px", "left": mitadWidth+"px", "font-size": "50px", "color": "red","font-family": "BioRhyme, serif", "text-shadow": "-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black"})
   $("body").append(text);
   setTimeout(function(){
@@ -93,6 +94,7 @@ function mostrarAcierto() {
   var text = $("<p>").html("<b>Muy bien!</b>")
   var contenedor = $("#contenedor")
   mitadWidth = $("body").width() / 2 - 70 ;
+  reproducirSonido('bienhecho');
   text.css({"position":"absolute", "top":"50px", "left": mitadWidth+"px", "font-size": "50px", "color": "yellow","font-family": "BioRhyme, serif", "text-shadow": "-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black"})
   $("body").append(text);
   setTimeout(function(){
@@ -101,6 +103,6 @@ function mostrarAcierto() {
 }
 
 function reproducirSonido(sonido){
-  var audio = new Audio(sonido);
-  audio.play();
+  var audio = document.getElementById(sonido);
+audio.play();
 }
