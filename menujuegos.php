@@ -1,3 +1,12 @@
+<?php
+require "conexion.php";
+
+session_start();
+$id = $_SESSION['id'];
+$query = "Select nombre, imagen from Usuarios, fotosUsuarios where id=$id and id=idUsuario;";
+$resultado = $conn->query($query);
+$alumno = $resultado->fetch_assoc();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,7 +52,9 @@
        <div id="box-loader">
             <i id="loader" class="fa fa-spinner fa-spin" ></i>
          </div>
-
+    <center>
+    <divs style="background-color: black; border-radius: 5px; color: white;"><?php echo $alumno['nombre']; ?> <img style="width: 100px; height: 100px; border-radius: 50%" src="<?php echo $alumno['imagen']; ?>"/></div>
+    </center>
     <div class="container-fluid">
         <center>
         <h1 id='titulo'>¿Qué Quiero Jugar?</h1>

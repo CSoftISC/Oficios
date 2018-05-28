@@ -10,6 +10,10 @@ $ap_materno = $_SESSION['ap_materno'];
 $ap_paterno = $_SESSION['ap_paterno'];
 $query = "insert into Calificaciones(aciertos, fecha, id_usuario, id_oficios) values($cal, now(),$id, $oficio);";
 $resultado = $conn->query($query);
+
+$query = "Select nombre, imagen from Usuarios, fotosUsuarios where id=$id and id=idUsuario;";
+$res = $conn->query($query);
+$alumno = $res->fetch_assoc();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,6 +35,9 @@ $resultado = $conn->query($query);
      <source src="audios/ogg/lograste.ogg">
      <source src="audios/mp3/lograste.mp3">
  </audio>
+ 	<center>
+    <divs style="background-color: black; border-radius: 5px; color: white;"><?php echo $alumno['nombre']; ?> <img style="width: 100px; height: 100px; border-radius: 50%" src="<?php echo $alumno['imagen']; ?>"/></div>
+    </center>
 	<div class="container-fluid">
 		<center>
 		<h1 id="titulo">Bien hecho</h1>
