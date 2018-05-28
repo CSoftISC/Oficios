@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0
+-- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: May 28, 2018 at 05:02 PM
--- Server version: 10.1.32-MariaDB
--- PHP Version: 7.2.4
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 28-05-2018 a las 20:32:05
+-- Versión del servidor: 10.1.30-MariaDB
+-- Versión de PHP: 7.2.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,12 +19,12 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `oficios`
+-- Base de datos: `oficios`
 --
 
 DELIMITER $$
 --
--- Procedures
+-- Procedimientos
 --
 CREATE DEFINER=`root`@`localhost` PROCEDURE `promedioPorOficio` ()  BEGIN
 	select u.id usuarioId, u.nombre usuarioNombre, sum(aciertos)/count(aciertos)  promedio, o.id oficioId, o.nombre oficioNombre from Usuarios u, Calificaciones c, Oficios o where u.id = c.id_usuario and o.id = c.id_oficios GROUP by c.id_oficios, u.id;
@@ -39,10 +39,10 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Calificaciones`
+-- Estructura de tabla para la tabla `calificaciones`
 --
 
-CREATE TABLE `Calificaciones` (
+CREATE TABLE `calificaciones` (
   `id` int(11) NOT NULL,
   `aciertos` int(11) DEFAULT NULL,
   `fecha` date DEFAULT NULL,
@@ -51,10 +51,10 @@ CREATE TABLE `Calificaciones` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `Calificaciones`
+-- Volcado de datos para la tabla `calificaciones`
 --
 
-INSERT INTO `Calificaciones` (`id`, `aciertos`, `fecha`, `id_usuario`, `id_oficios`) VALUES
+INSERT INTO `calificaciones` (`id`, `aciertos`, `fecha`, `id_usuario`, `id_oficios`) VALUES
 (1, 86, '2018-03-17', 1, 1),
 (2, 86, '2018-03-17', 1, 3),
 (3, 71, '2018-03-17', 1, 4),
@@ -137,19 +137,19 @@ INSERT INTO `Calificaciones` (`id`, `aciertos`, `fecha`, `id_usuario`, `id_ofici
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Oficios`
+-- Estructura de tabla para la tabla `oficios`
 --
 
-CREATE TABLE `Oficios` (
+CREATE TABLE `oficios` (
   `id` int(11) NOT NULL,
   `nombre` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `Oficios`
+-- Volcado de datos para la tabla `oficios`
 --
 
-INSERT INTO `Oficios` (`id`, `nombre`) VALUES
+INSERT INTO `oficios` (`id`, `nombre`) VALUES
 (1, 'Conserje'),
 (2, 'Bolero'),
 (3, 'Carpintero'),
@@ -161,10 +161,10 @@ INSERT INTO `Oficios` (`id`, `nombre`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Usuarios`
+-- Estructura de tabla para la tabla `usuarios`
 --
 
-CREATE TABLE `Usuarios` (
+CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL,
   `nombre` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `ap_materno` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -174,10 +174,10 @@ CREATE TABLE `Usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `Usuarios`
+-- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `Usuarios` (`id`, `nombre`, `ap_materno`, `ap_paterno`, `promedio`, `imagen`) VALUES
+INSERT INTO `usuarios` (`id`, `nombre`, `ap_materno`, `ap_paterno`, `promedio`, `imagen`) VALUES
 (1, 'cosme', 'escobedo', 'sanchez', 0, NULL),
 (2, 'yadira', 'pena', 'ramirez', NULL, NULL),
 (3, 'carlos', 'silverira', 'hinojos', NULL, NULL),
@@ -185,65 +185,75 @@ INSERT INTO `Usuarios` (`id`, `nombre`, `ap_materno`, `ap_paterno`, `promedio`, 
 (5, 'damian ', 'escobedo', 'sanchez', NULL, NULL),
 (9, '12', '12', '12', NULL, NULL),
 (10, 'thisnuts', 'asdf', 'ad', NULL, NULL),
-(11, 'Ulises', 'Perez', 'Pada', NULL, NULL),
-(12, 'Carlos', 'Salazar', 'Fernandez', NULL, NULL);
+(11, 'Ulises', 'Perez', 'Pada', NULL, 'Ulises.jpg'),
+(12, 'Carlos', 'Salazar', 'Fernandez', NULL, 'Carlos.jpg'),
+(13, 'José', 'Alonso', 'Hernández', NULL, 'Jose.jpg'),
+(14, 'Antonio', 'Razcon', NULL, NULL, 'Antonio.jpg'),
+(15, 'Juan', 'Bolívar', 'Galeana', NULL, 'Juan.jpg'),
+(16, 'Esau', 'Grageda', 'Barajas', NULL, 'Esau.jpg'),
+(17, 'Paulina', 'Martinez', NULL, NULL, 'Paulina.jpg'),
+(18, 'Jorge', 'Pizarro', NULL, NULL, 'Jorge.jpg'),
+(19, 'Oscar', 'Rivera', NULL, NULL, 'Oscar.jpg'),
+(20, 'Marcos', 'Rodríguez', NULL, NULL, 'Marcos.jpg'),
+(21, 'Janeth', 'Talavera', 'Cruz', NULL, 'Janeth.jpg'),
+(22, 'Brayan', 'Gutiérrez', NULL, NULL, 'Brayan.jpg');
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `Calificaciones`
+-- Indices de la tabla `calificaciones`
 --
-ALTER TABLE `Calificaciones`
+ALTER TABLE `calificaciones`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_usuario` (`id_usuario`),
   ADD KEY `id_oficios` (`id_oficios`);
 
 --
--- Indexes for table `Oficios`
+-- Indices de la tabla `oficios`
 --
-ALTER TABLE `Oficios`
+ALTER TABLE `oficios`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `Usuarios`
+-- Indices de la tabla `usuarios`
 --
-ALTER TABLE `Usuarios`
+ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `Calificaciones`
+-- AUTO_INCREMENT de la tabla `calificaciones`
 --
-ALTER TABLE `Calificaciones`
+ALTER TABLE `calificaciones`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
 
 --
--- AUTO_INCREMENT for table `Oficios`
+-- AUTO_INCREMENT de la tabla `oficios`
 --
-ALTER TABLE `Oficios`
+ALTER TABLE `oficios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `Usuarios`
+-- AUTO_INCREMENT de la tabla `usuarios`
 --
-ALTER TABLE `Usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+ALTER TABLE `usuarios`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
--- Constraints for dumped tables
+-- Restricciones para tablas volcadas
 --
 
 --
--- Constraints for table `Calificaciones`
+-- Filtros para la tabla `calificaciones`
 --
-ALTER TABLE `Calificaciones`
-  ADD CONSTRAINT `Calificaciones_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `Usuarios` (`id`),
-  ADD CONSTRAINT `Calificaciones_ibfk_2` FOREIGN KEY (`id_oficios`) REFERENCES `Oficios` (`id`);
+ALTER TABLE `calificaciones`
+  ADD CONSTRAINT `Calificaciones_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`),
+  ADD CONSTRAINT `Calificaciones_ibfk_2` FOREIGN KEY (`id_oficios`) REFERENCES `oficios` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

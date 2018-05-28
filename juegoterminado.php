@@ -11,7 +11,7 @@ $ap_paterno = $_SESSION['ap_paterno'];
 $query = "insert into Calificaciones(aciertos, fecha, id_usuario, id_oficios) values($cal, now(),$id, $oficio);";
 $resultado = $conn->query($query);
 
-$query = "Select nombre, imagen from Usuarios where id=$id and id=idUsuario;";
+$query = "Select nombre, imagen from Usuarios where id=$id;";
 $res = $conn->query($query);
 $alumno = $res->fetch_assoc();
 ?>

@@ -21,23 +21,17 @@ if(isset($_POST['nombre'])){
       }
       
       if(empty($errors)==true){
-         move_uploaded_file($file_tmp,"images/users/".$file_name);
-
-    
-
+         move_uploaded_file($file_tmp,"img/users/".$file_name);
       }
       }else{
-
           alert($errors);
- 
-   
    
    }
 
     $nombre = $_POST['nombre'];
     $ap_paterno = $_POST['ap_paterno'];
     $ap_materno = $_POST['ap_materno'];
-    $query = "insert into Usuarios(nombre, ap_materno, ap_paterno) values ('$nombre', '$ap_materno', '$ap_paterno');";
+    $query = "insert into Usuarios(nombre, ap_materno, ap_paterno,imagen) values ('$nombre', '$ap_materno', '$ap_paterno', '$file_name');";
     $result = $conn->query($query);
     $_POST['username'] = $nombre;
 }

@@ -53,7 +53,7 @@ $alumno = $resultado->fetch_assoc();
             <i id="loader" class="fa fa-spinner fa-spin" ></i>
          </div>
     <center>
-    <divs style="background-color: black; border-radius: 5px; color: white;"><?php echo $alumno['nombre']; ?> <img style="width: 100px; height: 100px; border-radius: 50%" src="<?php echo $alumno['imagen']; ?>"/></div>
+    <divs style="background-color: black; border-radius: 5px; color: white;"><?php echo $alumno['nombre']; ?> <img style="width: 100px; height: 100px; border-radius: 50%" src="img/users/<?php echo $alumno['imagen']; ?>"/></div>
     </center>
     <div class="container-fluid">
         <center>

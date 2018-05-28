@@ -3,7 +3,7 @@ require "conexion.php";
 
 session_start();
 $id = $_SESSION['id'];
-$query = "Select nombre, imagen from Usuarios where id=$id and id=idUsuario;";
+$query = "Select nombre, imagen from Usuarios where id=$id;";
 $resultado = $conn->query($query);
 $alumno = $resultado->fetch_assoc();
 ?>
