@@ -78,7 +78,7 @@ $alumno = $resultado->fetch_assoc();
 	</div>
 
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+	<script src="js/jquery-3.3.1.min.js"></script>
 
 	<script type="text/javascript">
 		window.addEventListener("load", function(){
