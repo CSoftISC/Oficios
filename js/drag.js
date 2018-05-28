@@ -11,6 +11,9 @@ $(document).ready(function(){
     });
   });
 });
+$(document).ready(function(){
+document.getElementsByTagName("body")[0].style.cursor = "url('js/Arrow.cur'), auto";
+});
 
 function stopDrag(event, ui) {
 	if (inContainer(ui.helper)) {

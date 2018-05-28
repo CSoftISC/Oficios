@@ -1,6 +1,39 @@
 <?php
 include "conexion.php";
 if(isset($_POST['nombre'])){
+  
+   if(isset($_FILES['image'])){
+      $errors= array();
+      $file_name = $_FILES['image']['name'];
+      $file_size =$_FILES['image']['size'];
+      $file_tmp =$_FILES['image']['tmp_name'];
+      $file_type=$_FILES['image']['type'];
+      $file_ext=strtolower(end(explode('.',$_FILES['image']['name'])));
+      
+      $expensions= array("jpeg","jpg","png");
+      
+      if(in_array($file_ext,$expensions)=== false){
+         $errors[]="extension not allowed, please choose a JPEG or PNG file.";
+      }
+      
+      if($file_size > 2097152){
+         $errors[]='File size must be excately 2 MB';
+      }
+      
+      if(empty($errors)==true){
+         move_uploaded_file($file_tmp,"images/users/".$file_name);
+
+    
+
+      }
+      }else{
+
+          alert($errors);
+ 
+   
+   
+   }
+
     $nombre = $_POST['nombre'];
     $ap_paterno = $_POST['ap_paterno'];
     $ap_materno = $_POST['ap_materno'];
@@ -88,12 +121,13 @@ if(isset($_POST['username'])){
       <div class="content2",  style="position: relative; left: 250px; top: 40px;">
         <h2>Agregarme
         </h2>
-        <form method="post" action="">
+        <form method="post" action="" enctype="multipart/form-data">
           <div class="form-group">
             <input type="text" name="nombre" pattern="[A-Za-z]*" required placeholder="Mi nombre es..." />
             <input type="text" name="ap_paterno" pattern="[A-Za-z]*" placeholder="Mi primer apellido es..." />
             <input type="text" name="ap_materno" pattern="[A-Za-z]*" placeholder="Mi segundo apellido es..." />
             <input type="number" name="edad" pattern="[0-9]" placeholder="Mi edad es..." />
+          <button type="button" style="font-size: 15px;" onclick="document.getElementById('imagen').click();">Subir imagen</button><input id="imagen" type="file" name ="image"  style="display:none;"> 
           </div>
           <button type="reset" id="goLeft" class="off">Cancelar</button>
           <button type="submit">Agregame!</button>
@@ -122,7 +156,9 @@ if(isset($_POST['username'])){
 <script type="text/javascript">
     window.addEventListener("load", function(){
       //var loader = document.getElemtnBydId('loader');
-
+      $(document).ready(function(){
+document.getElementsByTagName("body")[0].style.cursor = "url('js/Arrow.cur'), auto";
+});
       $('#box-loader').fadeOut(3000);
 
     });

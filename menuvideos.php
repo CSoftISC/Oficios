@@ -131,6 +131,9 @@
 
 
     <script type="text/javascript">
+        $(document).ready(function(){
+document.getElementsByTagName("body")[0].style.cursor = "url('js/Arrow.cur'), auto";
+});
         window.addEventListener("load", function(){
             //var loader = document.getElemtnBydId('loader');
 
