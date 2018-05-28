@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.8.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 22, 2018 at 07:58 PM
--- Server version: 10.1.31-MariaDB
--- PHP Version: 7.2.3
+-- Generation Time: May 28, 2018 at 05:02 PM
+-- Server version: 10.1.32-MariaDB
+-- PHP Version: 7.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -102,7 +102,37 @@ INSERT INTO `Calificaciones` (`id`, `aciertos`, `fecha`, `id_usuario`, `id_ofici
 (45, 100, '2018-03-19', 1, 7),
 (46, 100, '2018-03-19', 1, 7),
 (47, 71, '2018-03-22', 3, 4),
-(48, 86, '2018-03-22', 3, 4);
+(48, 86, '2018-03-22', 3, 4),
+(49, 86, '2018-04-19', 2, 7),
+(50, 57, '2018-04-19', 2, 7),
+(51, 57, '2018-04-19', 2, 7),
+(52, 71, '2018-04-19', 2, 7),
+(53, 71, '2018-04-19', 2, 7),
+(54, 57, '2018-04-19', 2, 1),
+(55, 57, '2018-04-19', 2, 2),
+(56, 86, '2018-04-19', 2, 3),
+(57, 100, '2018-04-19', 2, 4),
+(58, 100, '2018-04-19', 2, 5),
+(59, 71, '2018-04-19', 2, 6),
+(60, 71, '2018-04-19', 2, 6),
+(61, 71, '2018-04-19', 2, 6),
+(62, 71, '2018-04-19', 2, 6),
+(63, 43, '2018-04-19', 2, 6),
+(64, 100, '2018-04-22', 10, 3),
+(65, 71, '2018-04-22', 10, 3),
+(66, 71, '2018-04-22', 9, 1),
+(67, 71, '2018-05-20', 1, 3),
+(68, 100, '2018-05-24', 11, 4),
+(69, 100, '2018-05-24', 11, 7),
+(70, 100, '2018-05-24', 11, 1),
+(71, 86, '2018-05-24', 11, 2),
+(72, 100, '2018-05-24', 11, 6),
+(73, 100, '2018-05-24', 11, 5),
+(74, 100, '2018-05-24', 11, 3),
+(75, 100, '2018-05-24', 11, 4),
+(76, 100, '2018-05-24', 11, 6),
+(77, 43, '2018-05-28', 1, 3),
+(78, 43, '2018-05-28', 1, 3);
 
 -- --------------------------------------------------------
 
@@ -139,19 +169,24 @@ CREATE TABLE `Usuarios` (
   `nombre` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `ap_materno` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `ap_paterno` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `promedio` double DEFAULT NULL
+  `promedio` double DEFAULT NULL,
+  `imagen` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `Usuarios`
 --
 
-INSERT INTO `Usuarios` (`id`, `nombre`, `ap_materno`, `ap_paterno`, `promedio`) VALUES
-(1, 'cosme', 'escobedo', 'sanchez', 0),
-(2, 'yadira', 'pena', 'ramirez', NULL),
-(3, 'carlos', 'silverira', 'hinojos', NULL),
-(4, 'paul', 'estala', 'enriquez', NULL),
-(5, 'damian ', 'escobedo', 'sanchez', NULL);
+INSERT INTO `Usuarios` (`id`, `nombre`, `ap_materno`, `ap_paterno`, `promedio`, `imagen`) VALUES
+(1, 'cosme', 'escobedo', 'sanchez', 0, NULL),
+(2, 'yadira', 'pena', 'ramirez', NULL, NULL),
+(3, 'carlos', 'silverira', 'hinojos', NULL, NULL),
+(4, 'paul', 'estala', 'enriquez', NULL, NULL),
+(5, 'damian ', 'escobedo', 'sanchez', NULL, NULL),
+(9, '12', '12', '12', NULL, NULL),
+(10, 'thisnuts', 'asdf', 'ad', NULL, NULL),
+(11, 'Ulises', 'Perez', 'Pada', NULL, NULL),
+(12, 'Carlos', 'Salazar', 'Fernandez', NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -185,7 +220,7 @@ ALTER TABLE `Usuarios`
 -- AUTO_INCREMENT for table `Calificaciones`
 --
 ALTER TABLE `Calificaciones`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
 
 --
 -- AUTO_INCREMENT for table `Oficios`
@@ -197,7 +232,7 @@ ALTER TABLE `Oficios`
 -- AUTO_INCREMENT for table `Usuarios`
 --
 ALTER TABLE `Usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Constraints for dumped tables

@@ -1,3 +1,12 @@
+<?php
+require "conexion.php";
+
+session_start();
+$id = $_SESSION['id'];
+$query = "Select nombre, imagen from Usuarios where id=$id and id=idUsuario;";
+$resultado = $conn->query($query);
+$alumno = $resultado->fetch_assoc();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,6 +55,9 @@
      <source src="audios/menu/ogg/pip.ogg">
      <source src="audios/menu/mp3/pip.mp3">
  </audio>
+ <center>
+    <divs style="background-color: black; border-radius: 5px; color: white;"><?php echo $alumno['nombre']; ?> <img style="width: 100px; height: 100px; border-radius: 50%" src="<?php echo $alumno['imagen']; ?>"/></div>
+    </center>
     <div class="container-fluid">
         <center>
         <h1 id='titulo'>¿Qué quiero ver?</h1>
